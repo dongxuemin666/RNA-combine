@@ -1,0 +1,14 @@
+#################################configuration file for relation.sh###########################################
+###########
+Calculate co-expression relations of genes
+The rows are genes
+###########
+
+method=PCA-PMI
+#Methods for relation calculation, Pearson, Spearman, PCA-PMI(Juan Zhao et al. PNAS, 2016) are supported
+
+input_matrix=/beegfs/store4/dongxm/fuck/data/co/co.txt
+#Input matrix file, csv or txt file
+
+output=/beegfs/store4/dongxm/fuck/data/co
+#The directory of output

@@ -1,0 +1,52 @@
+###############configuration module for build_index.sh #####################################
+
+sortmerna_index_path_0=/store4/dongxm/fuck/data/rrna
+#The path of rRNA index files(where do you want to save)
+
+hisat_index_path_0=/store4/dongxm/fuck/data/hisat-index
+#The path of hisat index of reference genome(where do you want to save)
+
+hisat_index_prefix_0=genome
+#The prefix of hisat index of reference genome you want to set
+
+genome_0=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/genome/genome_hg19/hg19.fasta
+#The reference genome
+
+hisat2_path_0=/store4/dongxm/software/dongconda/bin
+#The path of Hisat2 software
+
+
+###############configuration module for pre_process.sh #####################################
+fq_path=/store4/dongxm/fuck/data/bulk
+#The path of fastq files
+
+hisat2_path=/store4/dongxm/software/dongconda/bin
+#The path of Hisat2 software
+
+sortmerna_index_path=/store4/dongxm/fuck/data/rrna
+#The path of rRNA index files
+
+
+samtools_path=/store4/dongxm/software/dongconda/bin
+#The path of samtools
+
+featureCounts_path=/store4/dongxm/software/dongconda/bin
+#The path of featureCounts software
+
+hisat_index_path=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/hisat_index/human/hg19
+#The path of hisat index of reference genome
+
+hisat_index_prefix=genome
+#The prefix of hisat index of reference genome
+
+gtf=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
+#genome annotaion file, must be in the same version to reference genome and reference index file
+
+PE_or_SE=SE
+#You data is paied-end or single-end, enter SE or PE
+
+read_length=36
+#The read length of your data
+
+threads=20
+#threads for running

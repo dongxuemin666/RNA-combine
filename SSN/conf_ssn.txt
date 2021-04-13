@@ -1,0 +1,14 @@
+########################configuration module for SSN.sh########################################
+
+
+normal_gene_matrix=/store2/panshk/Project/10.Xuemin/toolbox/Data/breast_cancer_bulk/comb_two_batches/normal_final.csv
+#gene expression matrix of background sample
+
+case_gene_matrix=/store2/panshk/Project/10.Xuemin/toolbox/Data/breast_cancer_bulk/comb_two_batches/tumor_final.csv
+#gene expression matrix of case samples
+
+pvalue=0.001
+#highest p_value to save the SSN edges 
+
+out=/beegfs/store4/dongxm/fuck/data/ssn
+#the directory of output

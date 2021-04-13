@@ -1,0 +1,32 @@
+1 ##################configuration file for build_index.sh####################################
+
+genome_1=/store4/dongxm/fuck/data/mutation/hg19.fasta
+#reference genome
+
+gatk_path_1=/store2/panshk/Project/10.Xuemin/toolbox/Software/gatk-4.1.8.0
+#path of GATK software
+
+samtools_path_1=/store4/dongxm/software/dong_samtools/bin
+#path of samtools software
+
+
+2 ##################configuration file for mutation.sh####################################
+
+bam_path_2=/store4/dongxm/fuck/data/mutation/test1
+#path of bam files
+
+samtools_path_2=/public/software/anaconda3/bin
+#path of samtools software
+
+gatk_path_2=/store4/dongxm/fuck/data/mutation/softe/gatk-4.1.8.0
+#path of GATK software
+
+genome_2=/store4/dongxm/fuck/data/mutation/hg19.fasta
+#reference genome
+
+
+interval_2=chr1
+#One or more genomic intervals over which to operate
+
+sample_amount_2=multiple
+#single or multiple, single sample or mutiple samples(one condition) for calling

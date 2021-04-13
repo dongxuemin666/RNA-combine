@@ -1,0 +1,18 @@
+####################configuration file for function.sh ##################################
+input_significant_gene_file=/beegfs/store4/dongxm/fuck/data/function/genelist
+#Input the significant gene file that is produced by differential gene analysis
+
+gene_type=ENSEMBL
+#The ID type of genes you provided, SYMBOL, ENTREZID, ENSEMBL,ENSEMBLTRANS are supported
+
+number_of_significant_genes=40
+#The number of significant genes you want to analyze in you list
+
+output=/beegfs/store4/dongxm/fuck/data/function
+#The directory of output
+
+function_type=GO
+#This is function type you want choose for function enrichment, GO and KEGG are supported
+
+organism=Human
+#This is the organism of your samples, right now only Human and Mouse are supported
