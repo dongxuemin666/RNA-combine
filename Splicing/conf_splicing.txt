@@ -5,8 +5,7 @@ method=DEXseq
 
 ########################configuration module for DEXseq method########################################
 
-r_package_path_1=/beegfs/store4/dongxm/software/r_package
-# The path of R packages
+
 gtf_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 # Genome annotation file
 output_path_1=/beegfs/store4/dongxm/fuck/data/splicing3

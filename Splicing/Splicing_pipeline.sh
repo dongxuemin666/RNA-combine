@@ -5,7 +5,6 @@ method=`sed '/^method=/!d;s/.*=//' conf_splicing.txt`
 
 ################
 if [ "$method" == "DEXseq" ]; then
-r_package_path_1=`sed '/^r_package_path_1=/!d;s/.*=//' conf_splicing.txt`
 gtf_1=`sed '/^gtf_1=/!d;s/.*=//' conf_splicing.txt`
 script=../scripts
 output_path_1=`sed '/^output_path_1=/!d;s/.*=//' conf_splicing.txt`
