@@ -205,7 +205,7 @@ You don't need to know the usages of RNA-combine dependent softwares, but you ne
 |CellRanger	| Produce barcode-gene matrix based on scRNA fastq files |https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/tutorial_in|
 |Scrublet (Samuel L. et al., 2019) |	Doublet detection in scRNA data |pip install scrublet|
 |Scanpy (Wolf, F. et al., 2018) |	filtering, normalization, clustering, dimension reduction, trajectory analysis (and so on) of scRNA data |pip install scanpy|
-|isoseq3 |	Produce full-length, non-concatemer, unique transcripts based on PacBio raw bam read files |conda install -c bioconda isoseq3, conda install -c bioconda lima|
+|isoseq3 |	Produce full-length, non-concatemer, unique transcripts based on PacBio raw bam read files |conda install pbccs, conda install -c bioconda isoseq3, conda install -c bioconda lima|
 |blasr	| Map PacBio reads to reference genome |conda install -c bioconda blasr|
 
 
