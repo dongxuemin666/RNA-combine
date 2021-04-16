@@ -1,9 +1,43 @@
-1#############Configuration module for cell_clustering.sh#####################
+#############Configuration module for cellranger.sh#####################           
 
-input_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/cell_gene_filtered_matrix.csv
+cellranger_path_2=/store2/panshk/Project/10.Xuemin/toolbox/Software/cellranger/cellranger-4.0.0
+#Directory of cellranger software
+
+cellranger_ref_genome_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/cellranger_genome/refdata-cellranger-GRCh38-3.0.0
+#Directory of reference genome downloaded from cellranger website
+
+out_2=/store4/dongxm/fuck/data/cellranger
+#Output directory
+
+id_2=breast
+#Give a name to the sample
+
+fastq_path_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/breast_cancer_sc/cellreport2017/SRR5799774
+#The directory of fastq files
+
+sample_name_2=breast
+#This is so important, the naming rule of 10X fastq files is so strict, and it must have sample name information.
+
+expected_cell_number_2=3500
+#Expected cell number
+
+cores_to_run_2=20
+#Cores to run cellranger
+
+#############Configuration module for doublet_detection.sh#####################
+input_7=/beegfs/store4/dongxm/fuck/data/cellranger/breast/outs/filtered_feature_bc_matrix
+#The input 10X gene-barcode matrix
+
+output_7=/beegfs/store4/dongxm/fuck/data/cellranger
+#The directory of output
+
+
+#############Configuration module for cell_clustering.sh#####################
+
+input_1=/beegfs/store4/dongxm/fuck/data/cellranger/cell_gene_filtered_matrix.csv
 #cell_gene matrix produced by doublet_detection.sh
 
-output_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
+output_1=/beegfs/store4/dongxm/fuck/data/cellranger
 #output directory 
 
 organism_1=Human
@@ -15,39 +49,25 @@ min_genes_1=250
 max_genes_1=6000
 #The highest number of genes in cells 
 
-mitochondrial_gene_percentage_1=10
+mitochondrial_gene_percentage_1=20
 #The lowest percentage of mitochondrial genes
 
-num_of_PCs_1=40
+num_of_PCs_1=20
 #Number of PCs to calculate cell neighbors.
 
-2#############Configuration module for cellranger.sh#####################           
+#############Configuration module for search_cell_type.sh#####################
 
-cellranger_path_2=/store2/panshk/Project/10.Xuemin/toolbox/software/cellranger/cellranger-4.0.0
-#Directory of cellranger software
+database_5=CellMarker
+#Databases to search cell marker information, CellMarker and PanglaoDB are supported
 
-cellranger_ref_genome_2=/store2/panshk/Project/10.Xuemin/toolbox/data/ref/cellranger_genome/refdata-cellranger-GRCh38-3.0.0
-#Directory of reference genome downloaded from cellranger website
+genelist_5=/beegfs/store4/dongxm/fuck/data/cellranger/genelist
+#Significant genes for specific cell clusters
 
-out_2=/store2/panshk/Project/10.Xuemin/toolbox/data/breast_cancer_sc/cellreport2017/SRR5799774
-#Output directory
+organism_5=Human
+#Human and Mouse are supported
 
-id_2=breast
-#Give a name to the sample
 
-fastq_path_2=/store2/panshk/Project/10.Xuemin/toolbox/data/breast_cancer_sc/cellreport2017/SRR5799774
-#The directory of fastq files
-
-sample_name_2=breast
-#This is so important, the naming rule of 10X fastq files is so strict, and it must have sample name information.
-
-expected_cell_number_2=3500
-#Expected cell number
-
-cores_to_run_2=6
-#Cores to run cellranger
-
-3#############Configuration module for label_celltype.sh#####################
+#############Configuration module for label_celltype.sh#####################
 
 object_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/outs/object.h5ad
 #The Scanpy object processed by cell_clustering.sh
@@ -58,7 +78,7 @@ cell_type_3=T_helper_cell Monocyte1 B_cell NK_cell  T_memory_cell Monocyte2 DC M
 output_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
 #Output directory
 
-4#############Configuration module for plot_gene_scrna.sh#####################
+#############Configuration module for plot_gene_scrna.sh#####################
 
 object_4=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/object.h5ad
 #The Scanpy object
@@ -72,19 +92,9 @@ plot_gene_violin_4=MUC1 CXCL6 KRT6A
 output_4=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
 #Output directory
 
-5#############Configuration module for search_cell_type.sh#####################
-
-database_5=CellMarker
-#Databases to search cell marker information, CellMarker and PanglaoDB are supported
-
-genelist_5=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/genelist
-#Significant genes for specific cell clusters
-
-organism_5=Human
-#Human and Mouse are supported
 
 
-6#############Configuration module for trajectory.sh#####################
+#############Configuration module for trajectory.sh#####################
 input_6=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/object.h5ad
 #The scanpy object produced by scrna.py
 
@@ -97,9 +107,4 @@ output_6=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
 root_6=Monocyte1
 #The root cell types, for pesudotime analysis
 
-7#############Configuration module for doublet_detection.sh#####################
-input_7=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/filtered_gene_bc_matrices/hg19
-#The input 10X gene-barcode matrix
 
-output_7=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
-#The directory of output
