@@ -6,7 +6,7 @@ cellranger_path_2=/store2/panshk/Project/10.Xuemin/toolbox/Software/cellranger/c
 cellranger_ref_genome_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/cellranger_genome/refdata-cellranger-GRCh38-3.0.0
 #Directory of reference genome downloaded from cellranger website
 
-out_2=/store4/dongxm/fuck/data/cellranger
+out_2=/store4/dongxm/data/cellranger
 #Output directory
 
 id_2=breast
@@ -25,19 +25,19 @@ cores_to_run_2=20
 #Cores to run cellranger
 
 #############Configuration module for doublet_detection.sh#####################
-input_7=/beegfs/store4/dongxm/fuck/data/cellranger/breast/outs/filtered_feature_bc_matrix
+input_7=/beegfs/store4/dongxm/data/cellranger/breast/outs/filtered_feature_bc_matrix
 #The input 10X gene-barcode matrix
 
-output_7=/beegfs/store4/dongxm/fuck/data/cellranger
+output_7=/beegfs/store4/dongxm/data/cellranger
 #The directory of output
 
 
 #############Configuration module for cell_clustering.sh#####################
 
-input_1=/beegfs/store4/dongxm/fuck/data/cellranger/cell_gene_filtered_matrix.csv
+input_1=/beegfs/store4/dongxm/data/cellranger/cell_gene_filtered_matrix.csv
 #cell_gene matrix produced by doublet_detection.sh
 
-output_1=/beegfs/store4/dongxm/fuck/data/cellranger
+output_1=/beegfs/store4/dongxm/data/cellranger
 #output directory 
 
 organism_1=Human
@@ -60,7 +60,7 @@ num_of_PCs_1=20
 database_5=CellMarker
 #Databases to search cell marker information, CellMarker and PanglaoDB are supported
 
-genelist_5=/beegfs/store4/dongxm/fuck/data/cellranger/genelist
+genelist_5=/beegfs/store4/dongxm/data/cellranger/genelist
 #Significant genes for specific cell clusters
 
 organism_5=Human
