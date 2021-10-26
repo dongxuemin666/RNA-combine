@@ -1,9 +1,9 @@
 ###############configuration module for build_index.sh #####################################
 
-sortmerna_index_path_0=/store4/dongxm/fuck/data/rrna
+sortmerna_index_path_0=/store4/dongxm/data/rrna
 #The path of rRNA index files(where do you want to save)
 
-hisat_index_path_0=/store4/dongxm/fuck/data/hisat-index
+hisat_index_path_0=/store4/dongxm/data/hisat-index
 #The path of hisat index of reference genome(where do you want to save)
 
 hisat_index_prefix_0=genome
@@ -17,13 +17,13 @@ hisat2_path_0=/store4/dongxm/software/dongconda/bin
 
 
 ###############configuration module for pre_process.sh #####################################
-fq_path=/store4/dongxm/fuck/data/bulk
+fq_path=/store4/dongxm/data/bulk
 #The path of fastq files
 
 hisat2_path=/store4/dongxm/software/dongconda/bin
 #The path of Hisat2 software
 
-sortmerna_index_path=/store4/dongxm/fuck/data/rrna
+sortmerna_index_path=/store4/dongxm/data/rrna
 #The path of rRNA index files
 
 
