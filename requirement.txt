@@ -8,3 +8,5 @@ bioconda::pbccs
 bioconda::isoseq3
 bioconda::lima
 bioconda::blasr
+bioconda::scanpy
+bioconda::scrublet

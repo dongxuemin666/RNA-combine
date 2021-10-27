@@ -9,8 +9,13 @@ RNA-combine mainly contains three modules, NGS bulk RNA-seq data analysis, scRNA
 
 
 ## Usage
+###0 Environment building and overview
 
-Download the codes to your directory.
+Download the codes to your directory and build the environment using below code  
+```Bash
+conda install --file=requirement.txt
+```
+
 To use function modules in each directories, first, you need to edit parameters for concerned modules in configuration file, such as the path of softwares, the path of raw sequencing data. This process is quite simple, because all parameters are explained in configration file. Then, run corresponding bash commands. 
 ### 1 Bulk NGS RNA-seq data analysis
 #### 1.1 Pre-processing_RNA
@@ -191,22 +196,21 @@ Second you need simply run map.sh
 Then the results will be outputted to output directory 
 
 ## Dependencies
-You don't need to know the usages of RNA-combine dependent softwares, but you need to install softwares for function modules you want to run, only in this way, you can provide software paths to toolbox. Because the usages of each version of softwares may be different, we suggest you install last version of softwares. Please let me know if errors happened in RNA-combine due to compatibility and upgrade of dependent softwares. Bellow shows the dependent softwares. 
-|Methods|Description|Install|
-| ------------- |:-------------:| :-------------:| 
-|Sortmerna (Kopylova E. et al., 2012)	|Removing rRNA sequences | automatically install |
-|Hisat2 (Kim D et al., 2015)	| Aligning reads to reference genome |conda install hisat2 (location: which hisat2)|
-|samtools	| Converting file formats and auxiliary functionalities |conda install -c bioconda samtools(location:which samtools)|
-|featureCounts (Yang Liao et al., 2013)	| Counting number of reads on genes |conda install -y subread(location: which featureCounts)| 
-|DESeq2(Love, M.I. et al., 2014), limma(Ritchie ME et al., 2015), edgeR(Robinson MD, 2010)|	 Differential gene analysis |Automatically installed by RNAcombine|
-|ClusterProfiler (Yu G et al., 2012)	 | Function enrichment |Automatically installed by RNAcombine|
-|DEXseq(Anders S et al., 2012), StringTie(Pertea M et al., 2015), rMATS(Shihao Shen et al., 2014)	| Splicing site detection |DEXseq is automatically installed; StringTie: conda install -c bioconda stringtie; rMATS: conda install -c bioconda rmats|
-|GATK |	Variant calling |step1: wget https://github.com/broadinstitute/gatk/releases/download/4.1.8.0/gatk-4.1.8.0.zip step2: unzip gatk-4.1.8.0.zip|
-|CellRanger	| Produce barcode-gene matrix based on scRNA fastq files |https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/tutorial_in|
-|Scrublet (Samuel L. et al., 2019) |	Doublet detection in scRNA data |pip install scrublet|
-|Scanpy (Wolf, F. et al., 2018) |	filtering, normalization, clustering, dimension reduction, trajectory analysis (and so on) of scRNA data |pip install scanpy|
-|isoseq3 |	Produce full-length, non-concatemer, unique transcripts based on PacBio raw bam read files |conda install pbccs, conda install -c bioconda isoseq3, conda install -c bioconda lima|
-|blasr	| Map PacBio reads to reference genome |conda install -c bioconda blasr|
+|Methods|Description|
+| ------------- |:-------------:| 
+|Sortmerna (Kopylova E. et al., 2012)	|Removing rRNA sequences |
+|Hisat2 (Kim D et al., 2015)	| Aligning reads to reference genome |
+|samtools	| Converting file formats and auxiliary functionalities |
+|featureCounts (Yang Liao et al., 2013)	| Counting number of reads on genes | 
+|DESeq2(Love, M.I. et al., 2014), limma(Ritchie ME et al., 2015), edgeR(Robinson MD, 2010)|	 Differential gene analysis |
+|ClusterProfiler (Yu G et al., 2012)     | Function enrichment|
+|DEXseq(Anders S et al., 2012), StringTie(Pertea M et al., 2015), rMATS(Shihao Shen et al., 2014)	| Splicing site detection |
+|GATK |	Variant calling |
+|CellRanger	| Produce barcode-gene matrix based on scRNA fastq files |
+|Scrublet (Samuel L. et al., 2019) |	Doublet detection in scRNA data |
+|Scanpy (Wolf, F. et al., 2018) |	filtering, normalization, clustering, dimension reduction, trajectory analysis (and so on) of scRNA data |
+|isoseq3 |	Produce full-length, non-concatemer, unique transcripts based on PacBio raw bam read files |
+|blasr	| Map PacBio reads to reference genome |
 
 
 
