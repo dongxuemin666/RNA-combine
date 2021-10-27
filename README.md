@@ -9,7 +9,7 @@ RNA-combine mainly contains three modules, NGS bulk RNA-seq data analysis, scRNA
 
 
 ## Usage
-###0 Environment building and overview
+### 0 Environment building and overview
 
 Download the codes to your directory and build the environment using below code  
 ```Bash
