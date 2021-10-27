@@ -4,7 +4,7 @@ sortmerna_index_path=`sed '/^sortmerna_index_path_0=/!d;s/.*=//' conf_prerna.txt
 hisat_index_path=`sed '/^hisat_index_path_0=/!d;s/.*=//' conf_prerna.txt`
 hisat_index_prefix=`sed '/^hisat_index_prefix_0=/!d;s/.*=//' conf_prerna.txt`
 genome=`sed '/^genome_0=/!d;s/.*=//' conf_prerna.txt`
-hisat2_path=`sed '/^hisat2_path_0=/!d;s/.*=//' conf_prerna.txt`
+#hisat2_path=`sed '/^hisat2_path_0=/!d;s/.*=//' conf_prerna.txt`
 
 cd ../scripts
 sortmerna_path=$(pwd)
@@ -23,4 +23,5 @@ $sortmerna_path/rRNA_databases/rfam-5s-database-id98.fasta,./rfam-5s-db:\
 $sortmerna_path/rRNA_databases/rfam-5.8s-database-id98.fasta,./rfam-5.8s-db
 
 cd $hisat_index_path || exit 1
-$hisat2_path/hisat2-build -p 4 $genome $hisat_index_prefix
+#$hisat2_path/
+hisat2-build -p 4 $genome $hisat_index_prefix

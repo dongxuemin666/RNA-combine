@@ -3,10 +3,10 @@
 fq_path=`sed '/^fq_path=/!d;s/.*=//' conf_prerna.txt`
 threads=`sed '/^threads=/!d;s/.*=//' conf_prerna.txt`
 
-hisat2_path=`sed '/^hisat2_path=/!d;s/.*=//' conf_prerna.txt`
+#hisat2_path=`sed '/^hisat2_path=/!d;s/.*=//' conf_prerna.txt`
 sortmerna_index_path=`sed '/^sortmerna_index_path=/!d;s/.*=//' conf_prerna.txt`
-samtools_path=`sed '/^samtools_path=/!d;s/.*=//' conf_prerna.txt`
-featureCounts_path=`sed '/^featureCounts_path=/!d;s/.*=//' conf_prerna.txt`
+#samtools_path=`sed '/^samtools_path=/!d;s/.*=//' conf_prerna.txt`
+#featureCounts_path=`sed '/^featureCounts_path=/!d;s/.*=//' conf_prerna.txt`
 
 hisat_index_path=`sed '/^hisat_index_path=/!d;s/.*=//' conf_prerna.txt`
 hisat_index_prefix=`sed '/^hisat_index_prefix=/!d;s/.*=//' conf_prerna.txt`
@@ -67,7 +67,8 @@ ILLUMINACLIP:$trim_path/adapters/TruSeq3-PE.fa:2:30:10:8:true LEADING:3 TRAILING
         cd ..
         mkdir 3.align
         cd 3.align
-        $hisat2_path/hisat2 -t -p $threads -q -x $hisat_index_path/$hisat_index_prefix \
+        #$hisat2_path/
+	hisat2 -t -p $threads -q -x $hisat_index_path/$hisat_index_prefix \
         --rg-id ${pre_name} \
         --rg SM:${pre_name} --rg LB:${pre_name} --rg PL:ILLUMINA \           
         -1 ../2.trim/${pre_name}_nonrRNA_trimmed_1P.fastq \
@@ -76,13 +77,16 @@ ILLUMINACLIP:$trim_path/adapters/TruSeq3-PE.fa:2:30:10:8:true LEADING:3 TRAILING
                 2> ${pre_name}_alignment.log
 
         # sam to bam
-        $samtools_path/samtools view -S ${pre_name}.sam -b > ${pre_name}.bam
+        #$samtools_path/
+	samtools view -S ${pre_name}.sam -b > ${pre_name}.bam
         # sort default chromosome location
-        $samtools_path/samtools sort ${pre_name}.bam -o ${pre_name}_sorted.bam
+        #$samtools_path/samtools sort ${pre_name}.bam -o ${pre_name}_sorted.bam
         # build index
-        $samtools_path/samtools index ${pre_name}_sorted.bam
+        #$samtools_path/
+	samtools index ${pre_name}_sorted.bam
         # sort by reads name
-        $samtools_path/samtools sort  -n ${pre_name}_sorted.bam -o ${pre_name}_nsorted.bam
+        #$samtools_path/
+	samtools sort  -n ${pre_name}_sorted.bam -o ${pre_name}_nsorted.bam
     
 
 
@@ -91,7 +95,8 @@ ILLUMINACLIP:$trim_path/adapters/TruSeq3-PE.fa:2:30:10:8:true LEADING:3 TRAILING
         cd 4.count
         # Step 4
         # Count number of reads on genes
-        $featureCounts_path/featureCounts \
+        #$featureCounts_path/
+	featureCounts \
                 -T $threads \
                 -p \
                 -t exon \
@@ -165,17 +170,21 @@ LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:$read_length 2> ${pre_name}_Trimm
         cd ..
         mkdir 3.align
         cd 3.align
-        $hisat2_path/hisat2 -t  -p $threads  -x $hisat_index_path/$hisat_index_prefix --rg-id ${pre_name} --rg SM:${pre_name} --rg LB:${pre_name} --rg PL:ILLUMINA -U ../2.trim/${pre_name}_nonrRNA_trimmed.fastq -S ${pre_name}.sam \
+        #$hisat2_path/
+	hisat2 -t  -p $threads  -x $hisat_index_path/$hisat_index_prefix --rg-id ${pre_name} --rg SM:${pre_name} --rg LB:${pre_name} --rg PL:ILLUMINA -U ../2.trim/${pre_name}_nonrRNA_trimmed.fastq -S ${pre_name}.sam \
                 2> ${pre_name}_alignment.log
 
         # sam to bam
-        $samtools_path/samtools view -S ${pre_name}.sam -b > ${pre_name}.bam
+        #$samtools_path/
+	samtools view -S ${pre_name}.sam -b > ${pre_name}.bam
         # sort default chromosome location
-        $samtools_path/samtools sort ${pre_name}.bam -o ${pre_name}_sorted.bam
+        #$samtools_path/samtools sort ${pre_name}.bam -o ${pre_name}_sorted.bam
         # build index
-        $samtools_path/samtools index ${pre_name}_sorted.bam
+        #$samtools_path/
+	samtools index ${pre_name}_sorted.bam
         # sort by reads name
-        $samtools_path/samtools sort  -n ${pre_name}_sorted.bam -o ${pre_name}_nsorted.bam
+        #$samtools_path/
+	samtools sort  -n ${pre_name}_sorted.bam -o ${pre_name}_nsorted.bam
 #     
 # 
 # 
@@ -184,7 +193,8 @@ LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:$read_length 2> ${pre_name}_Trimm
         cd 4.count
         # Step 4
         # Count number of reads on genes
-        $featureCounts_path/featureCounts \
+        #$featureCounts_path/
+	featureCounts \
                 -T $threads \
                 -p \
                 -t exon \

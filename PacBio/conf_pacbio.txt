@@ -18,11 +18,11 @@ out_path_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/PacBio/test
 #output directory
 
 2 ##################configuration file for map.sh####################################
-bam_file_2=/store4/dongxm/data/iso/alz.1perc.subreads.flnc.bam
+bam_file_2=/store4/dongxm/fuck/data/iso/alz.1perc.subreads.flnc.bam
 #raw sequencing file
 
 reference_genome_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/genome/genome_hg19/hg19.fasta
 #reference genome
 
-out_path_2=/store4/dongxm/data/blasr
+out_path_2=/store4/dongxm/fuck/data/blasr
 #output directory

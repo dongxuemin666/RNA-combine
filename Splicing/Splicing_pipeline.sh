@@ -44,9 +44,9 @@ fi
 
 if [ "$method" == "StringTie+ballgown" ]; then
 sam_path_2=`sed '/^sam_path_2=/!d;s/.*=//' conf_splicing.txt`
-samtools_path_2=`sed '/^samtools_path_2=/!d;s/.*=//' conf_splicing.txt`
+#samtools_path_2=`sed '/^samtools_path_2=/!d;s/.*=//' conf_splicing.txt`
 out_path_2=`sed '/^out_path_2=/!d;s/.*=//' conf_splicing.txt`
-stringtie_path_2=`sed '/^stringtie_path_2=/!d;s/.*=//' conf_splicing.txt`
+#stringtie_path_2=`sed '/^stringtie_path_2=/!d;s/.*=//' conf_splicing.txt`
 gtf_2=`sed '/^gtf_2=/!d;s/.*=//' conf_splicing.txt`
 metaData_2=`sed '/^metaData_2=/!d;s/.*=//' conf_splicing.txt`
 qvalue_2=`sed '/^qvalue_2=/!d;s/.*=//' conf_splicing.txt`
@@ -58,17 +58,20 @@ cd $sam_path_2 || exit 1
 for file in $(ls | grep .sam)
         do
 pre_name=${file%.sam}
-$samtools_path_2/samtools sort -@ 8 -o $out_path_2/${pre_name}.bam $file
+#$samtools_path_2/
+samtools sort -@ 8 -o $out_path_2/${pre_name}.bam $file
         done
 cd $out_path_2 || exit 1
 mkdir assembly
 for file in $(ls | grep .bam)
         do
 pre_name=${file%.bam}
-$stringtie_path_2/stringtie $file -l $pre_name -p 8 -G $gtf_2 -o assembly/${pre_name}.gtf
+#$stringtie_path_2/
+stringtie $file -l $pre_name -p 8 -G $gtf_2 -o assembly/${pre_name}.gtf
 echo "assembly/${pre_name}.gtf" >> mergelist.txt
         done
-$stringtie_path_2/stringtie --merge -p 8 -G $gtf_2 -o stringtie_merged.gtf mergelist.txt
+#$stringtie_path_2/
+stringtie --merge -p 8 -G $gtf_2 -o stringtie_merged.gtf mergelist.txt
 
 echo "The number of transcripts"
 cat stringtie_merged.gtf | grep -v "^#" | awk '$3=="transcript" {print}' | wc -l
@@ -78,7 +81,8 @@ for file in $(ls | grep .bam)
         do
 pre_name=${file%.bam}
 mkdir ballgown/$pre_name
-$stringtie_path_2/stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/$pre_name/${pre_name}.gtf $file
+#$stringtie_path_2/
+stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/$pre_name/${pre_name}.gtf $file
         done
         
 Rscript $raw_dir/ballgown.R -m $metaData_2 -q $qvalue_2 -o $out_path_2 -g $Gene_to_plot_2

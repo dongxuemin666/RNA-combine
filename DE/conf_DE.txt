@@ -2,10 +2,10 @@
 method=DESeq2
 #Methods for DE analysis, DESeq2, edgeR, limma are supported
 
-input_matrix=/store4/dongxm/data/bulk/4.count/expression_matrix.txt
+input_matrix=/store4/dongxm/fuck/data/bulk/4.count/expression_matrix.txt
 #Input gene expression matrix file
 
-metadata=/store4/dongxm/data/DE/meta.txt
+metadata=/store4/dongxm/fuck/data/DE/meta.txt
 #Metadata that introduce the condition of samples, below is one example
 ###########################
 id	dex
@@ -17,7 +17,7 @@ SRR868873	tumor
 SRR868877	tumor
 ############################
 
-output=/store4/dongxm/data/DE
+output=/store4/dongxm/fuck/data/DE
 #The directory of output 
 
 pvalue=0.05

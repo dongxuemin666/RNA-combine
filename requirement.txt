@@ -1,0 +1,10 @@
+pbccs
+bioconda::hisat2
+bioconda::samtools
+bioconda::subread
+bioconda::gatk4
+bioconda::stringtie
+bioconda::pbccs
+bioconda::isoseq3
+bioconda::lima
+bioconda::blasr
