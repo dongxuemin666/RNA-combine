@@ -4,7 +4,7 @@ A toolkit for comprehensive analysis on multiple platform transcriptome data
 ## Schematic
 RNA-combine mainly contains three modules, NGS bulk RNA-seq data analysis, scRNA-seq data analysis, PacBio data analysis
 
-![schematic](https://github.com/dongxuemin666/RNA-combine/blob/master/Fig1.eps)
+![schematic](https://github.com/dongxuemin666/RNA-combine/blob/master/Fig1.jpg)
 
 
 
