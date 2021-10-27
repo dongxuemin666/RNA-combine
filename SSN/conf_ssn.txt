@@ -10,5 +10,5 @@ case_gene_matrix=/store2/panshk/Project/10.Xuemin/toolbox/Data/breast_cancer_bul
 pvalue=0.001
 #highest p_value to save the SSN edges 
 
-out=/beegfs/store4/dongxm/fuck/data/ssn
+out=/beegfs/store4/dongxm/happy/data/ssn
 #the directory of output

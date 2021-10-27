@@ -1,5 +1,5 @@
 ####################configuration file for function.sh ##################################
-input_significant_gene_file=/beegfs/store4/dongxm/fuck/data/function/genelist
+input_significant_gene_file=/beegfs/store4/dongxm/happy/data/function/genelist
 #Input the significant gene file that is produced by differential gene analysis
 
 gene_type=ENSEMBL
@@ -8,7 +8,7 @@ gene_type=ENSEMBL
 number_of_significant_genes=40
 #The number of significant genes you want to analyze in you list
 
-output=/beegfs/store4/dongxm/fuck/data/function
+output=/beegfs/store4/dongxm/happy/data/function
 #The directory of output
 
 function_type=GO

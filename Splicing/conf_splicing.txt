@@ -8,11 +8,11 @@ method=DEXseq
 
 gtf_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 # Genome annotation file
-output_path_1=/beegfs/store4/dongxm/fuck/data/splicing3
+output_path_1=/beegfs/store4/dongxm/happy/data/splicing3
 #The directory of output
-sam_file_path_1=/beegfs/store4/dongxm/fuck/data/bulk/3.align
+sam_file_path_1=/beegfs/store4/dongxm/happy/data/bulk/3.align
 #The path of sam files
-metaData_1=/beegfs/store4/dongxm/fuck/data/DE/meta.txt
+metaData_1=/beegfs/store4/dongxm/happy/data/DE/meta.txt
 #The metaData file that describe the conditions of samles, below is one example
 ######
 id  dex
@@ -30,17 +30,17 @@ Gene_to_plot_1=ENSG00000063322.15_6
 
 ########################configuration module for StringTie+ballgown method#######################################
 
-sam_path_2=/beegfs/store4/dongxm/fuck/data/bulk/3.align
+sam_path_2=/beegfs/store4/dongxm/happy/data/bulk/3.align
 #The path of sam files
 samtools_path_2=/store4/dongxm/software/dongconda/bin
 #The path of samtools, could be installed by anaconda
-out_path_2=/beegfs/store4/dongxm/fuck/data/splicing
+out_path_2=/beegfs/store4/dongxm/happy/data/splicing
 #The path of output
 stringtie_path_2=/store4/dongxm/software/dongconda/bin
 #The path of StringTie, could be installed by anaconda
 gtf_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 #The genome annotation file 
-metaData_2=/beegfs/store4/dongxm/fuck/data/DE/meta.txt
+metaData_2=/beegfs/store4/dongxm/happy/data/DE/meta.txt
 #The metaData file that describe the conditions of samles, below is one example
 ######
 id  dex
@@ -62,11 +62,11 @@ Gene_to_plot_2=MAF1
 #conda install -c bioconda rmats
 
 
-bam_path_3=/beegfs/store4/dongxm/fuck/data/bulk/3.align
+bam_path_3=/beegfs/store4/dongxm/happy/data/bulk/3.align
 #The path of bam files
 read_length_3=36
 #The read length of sequenced reads
-condition1_files_3=/store4/dongxm/fuck/data/splicing1/normal.txt
+condition1_files_3=/store4/dongxm/happy/data/splicing1/normal.txt
 #A file that introduce the bam files in condition1, below is one example
 
 #############
@@ -76,15 +76,15 @@ condition1_files_3=/store4/dongxm/fuck/data/splicing1/normal.txt
 #############
 
 
-condition2_files_3=/store4/dongxm/fuck/data/splicing1/tumor.txt
+condition2_files_3=/store4/dongxm/happy/data/splicing1/tumor.txt
 #A file that introduce the bam files in condition2
 gtf_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 #The genome annotation file
-out_path_3=/store4/dongxm/fuck/data/splicing1
+out_path_3=/store4/dongxm/happy/data/splicing1
 #The directory of output
 paired_or_single_3=single
 #The sequencing is paired-end or single-end
-tmp_3=/store4/dongxm/fuck/data/splicing1/tmp
+tmp_3=/store4/dongxm/happy/data/splicing1/tmp
 #A temporary directory to store intermediate file
 event_type_3=RI
 ############
