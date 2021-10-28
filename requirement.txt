@@ -1,4 +1,3 @@
-pbccs
 bioconda::hisat2
 bioconda::samtools
 bioconda::subread
