@@ -32,11 +32,11 @@ Gene_to_plot_1=ENSG00000063322.15_6
 
 sam_path_2=/beegfs/store4/dongxm/happy/data/bulk/3.align
 #The path of sam files
-samtools_path_2=/store4/dongxm/software/dongconda/bin
+#samtools_path_2=/store4/dongxm/software/dongconda/bin
 #The path of samtools, could be installed by anaconda
 out_path_2=/beegfs/store4/dongxm/happy/data/splicing
 #The path of output
-stringtie_path_2=/store4/dongxm/software/dongconda/bin
+#stringtie_path_2=/store4/dongxm/software/dongconda/bin
 #The path of StringTie, could be installed by anaconda
 gtf_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 #The genome annotation file 
@@ -58,8 +58,7 @@ Gene_to_plot_2=MAF1
 
 
 ########################configuration module for rMATS method########################################
-#Be sure to install rMATS first, below is how to install
-#conda install -c bioconda rmats
+
 
 
 bam_path_3=/beegfs/store4/dongxm/happy/data/bulk/3.align

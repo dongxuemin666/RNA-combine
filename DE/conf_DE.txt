@@ -1,5 +1,5 @@
 #############configuration file for DE.sh######################
-method=DESeq2
+method=limma
 #Methods for DE analysis, DESeq2, edgeR, limma are supported
 
 input_matrix=/store4/dongxm/happy/data/bulk/4.count/expression_matrix.txt
