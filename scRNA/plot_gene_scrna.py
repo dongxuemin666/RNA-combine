@@ -19,6 +19,7 @@ else:
 	sys.exit(1)
 if len(args.plot_gene_umap):
 	for i in range(0,len(args.plot_gene_umap)):
+		#print(type(args.plot_gene_umap[i]))
 		sc.pl.umap(adata, color=args.plot_gene_umap[i])
 		plt.savefig(args.output+'/'+args.plot_gene_umap[i]+"_umap_expression.png")
 		plt.cla()

@@ -7,7 +7,7 @@ bioconda::pbccs
 bioconda::isoseq3
 bioconda::lima
 bioconda::blasr
-bioconda::scanpy
+bioconda::scanpy==1.6.0
 conda-forge::leidenalg
 bioconda::scrublet
 bioconda::pysam

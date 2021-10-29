@@ -83,13 +83,13 @@ output_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
 object_4=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/object.h5ad
 #The Scanpy object
 
-plot_gene_umap_4=CD79A IL7R NKG7 PPBP FCGR3A CST3
+plot_gene_umap_4=CD79A
 #Genes expression you want to plot on UMAP plot, optional
 
-plot_gene_violin_4=MUC1 CXCL6 KRT6A
+plot_gene_violin_4=MUC1
 #Genes you want to plot in form of violin plot, optional
 
-output_4=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
+output_4=.
 #Output directory
 
 
