@@ -1,6 +1,6 @@
 ########################configuration module for Splicing.sh########################################
 
-method=DEXseq
+method=StringTie+ballgown
 #There are three methods introduced here, including exon-based method: DEXseq, transcript-based method(not only): StringTie+ballgown, event-based method: rMATS
 
 ########################configuration module for DEXseq method########################################

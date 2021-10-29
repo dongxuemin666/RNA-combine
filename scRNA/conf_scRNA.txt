@@ -60,7 +60,7 @@ num_of_PCs_1=20
 database_5=CellMarker
 #Databases to search cell marker information, CellMarker and PanglaoDB are supported
 
-genelist_5=/beegfs/store4/dongxm/fuck/data/cellranger/genelist
+genelist_5=/beegfs/store4/dongxm/happy/data/cellranger/genelist
 #Significant genes for specific cell clusters
 
 organism_5=Human

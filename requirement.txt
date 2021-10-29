@@ -8,4 +8,5 @@ bioconda::isoseq3
 bioconda::lima
 bioconda::blasr
 bioconda::scanpy
+conda-forge::leidenalg
 bioconda::scrublet

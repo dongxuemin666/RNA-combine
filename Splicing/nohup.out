@@ -1,0 +1,67 @@
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+[bam_sort_core] merging from 0 files and 8 in-memory blocks...
+mkdir: cannot create directory ‘assembly’: File exists
+The number of transcripts
+232967
+mkdir: cannot create directory ‘ballgown’: File exists
+mkdir: cannot create directory ‘ballgown/SRR868857’: File exists
+mkdir: cannot create directory ‘ballgown/SRR868862’: File exists
+mkdir: cannot create directory ‘ballgown/SRR868865’: File exists
+mkdir: cannot create directory ‘ballgown/SRR868869’: File exists
+mkdir: cannot create directory ‘ballgown/SRR868873’: File exists
+mkdir: cannot create directory ‘ballgown/SRR868877’: File exists
+Loading required package: getopt
+Loading required package: ballgown
+
+Attaching package: ‘ballgown’
+
+The following object is masked from ‘package:base’:
+
+    structure
+
+Loading required package: genefilter
+Loading required package: dplyr
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:ballgown’:
+
+    contains, expr, last
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Thu Oct 28 23:37:02 2021
+Thu Oct 28 23:37:02 2021: Reading linking tables
+Thu Oct 28 23:37:05 2021: Reading intron data files
+Thu Oct 28 23:37:10 2021: Merging intron data
+Thu Oct 28 23:37:14 2021: Reading exon data files
+Thu Oct 28 23:37:26 2021: Merging exon data
+Thu Oct 28 23:37:30 2021: Reading transcript data files
+Thu Oct 28 23:37:37 2021: Merging transcript data
+Wrapping up the results
+Thu Oct 28 23:37:39 2021
+Loading required package: ggplot2
+
+Attaching package: ‘ggplot2’
+
+The following object is masked from ‘package:ballgown’:
+
+    expr
+
+Loading required package: cowplot
+null device 
+          1 
+null device 
+          1 
+1890.14user 119.68system 17:24.03elapsed 192%CPU (0avgtext+0avgdata 6110532maxresident)k
+57597115inputs+12688041outputs (584major+12172321minor)pagefaults 0swaps
