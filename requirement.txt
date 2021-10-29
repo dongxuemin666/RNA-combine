@@ -10,3 +10,5 @@ bioconda::blasr
 bioconda::scanpy
 conda-forge::leidenalg
 bioconda::scrublet
+bioconda::pysam
+bioconda::rmats 

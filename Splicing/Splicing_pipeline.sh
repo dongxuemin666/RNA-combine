@@ -92,7 +92,7 @@ fi
 ###################
 
 if [ "$method" == "rMATS" ]; then
-bam_path_3=`sed '/^bam_path_3=/!d;s/.*=//' conf_splicing.txt`
+#bam_path_3=`sed '/^bam_path_3=/!d;s/.*=//' conf_splicing.txt`
 read_length_3=`sed '/^read_length_3/!d;s/.*=//' conf_splicing.txt`
 condition1_files_3=`sed '/^condition1_files_3=/!d;s/.*=//' conf_splicing.txt`
 condition2_files_3=`sed '/^condition2_files_3=/!d;s/.*=//' conf_splicing.txt`

@@ -1,6 +1,6 @@
 ########################configuration module for Splicing.sh########################################
 
-method=StringTie+ballgown
+method=rMATS
 #There are three methods introduced here, including exon-based method: DEXseq, transcript-based method(not only): StringTie+ballgown, event-based method: rMATS
 
 ########################configuration module for DEXseq method########################################
@@ -61,8 +61,6 @@ Gene_to_plot_2=MAF1
 
 
 
-bam_path_3=/beegfs/store4/dongxm/happy/data/bulk/3.align
-#The path of bam files
 read_length_3=36
 #The read length of sequenced reads
 condition1_files_3=/store4/dongxm/happy/data/splicing1/normal.txt
