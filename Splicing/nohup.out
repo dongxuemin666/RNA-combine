@@ -1,1 +1,16 @@
 mkdir: cannot create directory ‘assembly’: File exists
+The number of transcripts
+233576
+mkdir: cannot create directory ‘ballgown’: File exists
+WARNING: unknown gui 'MAF1', using X11
+
+Loading required package: getopt
+Failed with error:  ‘cannot read workspace version 3 written by R 3.6.3; need R 3.5.0 or newer’
+Installing package into ‘/beegfs/store4/dongxm/software/r_package’
+(as ‘lib’ is unspecified)
+Error in contrib.url(repos, type) : 
+  trying to use CRAN without setting a mirror
+Calls: install.packages -> grep -> contrib.url
+Execution halted
+757.90user 57.68system 10:08.18elapsed 134%CPU (0avgtext+0avgdata 511712maxresident)k
+5717098inputs+798820outputs (250major+7712751minor)pagefaults 0swaps
