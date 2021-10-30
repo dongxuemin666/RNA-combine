@@ -7,8 +7,14 @@ bioconda::pbccs
 bioconda::isoseq3
 bioconda::lima
 bioconda::blasr
-bioconda::scanpy==1.6.0
+bioconda::scanpy==1.7.1
 conda-forge::leidenalg
-bioconda::scrublet
+numba==0.51.2
+seaborn 
+scikit-learn 
+statsmodels
+pytables
+conda-forge::python-igraph
+bioconda::scrublet==0.2.3
 bioconda::pysam
 bioconda::rmats 

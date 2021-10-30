@@ -75,7 +75,7 @@ object_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/outs/object.h
 cell_type_3=T_helper_cell Monocyte1 B_cell NK_cell  T_memory_cell Monocyte2 DC Megakaryocyte Unknown
 # The cell types corresponding to cell clusters, for example T_cell B_cell NK 
 
-output_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
+output_3=.
 #Output directory
 
 #############Configuration module for plot_gene_scrna.sh#####################
@@ -101,7 +101,7 @@ input_6=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1/object.h5ad
 subset_celltype_6=T_helper_cell Monocyte1 B_cell NK_cell  T_memory_cell Monocyte2 DC Megakaryocyte
 #Due to not all cell types have evolutionary relations,you should provide a list of cell types that indeed have evolutionary relations or may have
 
-output_6=/store2/panshk/Project/10.Xuemin/toolbox/Data/sc10X/test1
+output_6=.
 #The directory of output
 
 root_6=Monocyte1
