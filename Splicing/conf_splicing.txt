@@ -32,12 +32,9 @@ Gene_to_plot_1=ENSG00000063322.15_6
 
 bam_path_2=/beegfs/store4/dongxm/happy/data/bulk/3.align/tmp
 #The path of bam(sorted) files
-#samtools_path_2=/store4/dongxm/software/dongconda/bin
-#The path of samtools, could be installed by anaconda
+
 out_path_2=/beegfs/store4/dongxm/happy/data/splicing
 #The path of output
-#stringtie_path_2=/store4/dongxm/software/dongconda/bin
-#The path of StringTie, could be installed by anaconda
 gtf_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 #The genome annotation file 
 metaData_2=/beegfs/store4/dongxm/happy/data/DE/meta.txt

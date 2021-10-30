@@ -1,14 +1,1 @@
-The number of transcripts
-232967
-WARNING: unknown gui 'MAF1', using X11
-
-Loading required package: getopt
-Failed with error:  ‘cannot read workspace version 3 written by R 3.6.3; need R 3.5.0 or newer’
-Installing package into ‘/beegfs/store4/dongxm/software/r_package’
-(as ‘lib’ is unspecified)
-Error in contrib.url(repos, type) : 
-  trying to use CRAN without setting a mirror
-Calls: install.packages -> grep -> contrib.url
-Execution halted
-803.53user 68.42system 8:12.06elapsed 177%CPU (0avgtext+0avgdata 508644maxresident)k
-5595939inputs+802917outputs (256major+7285596minor)pagefaults 0swaps
+mkdir: cannot create directory ‘assembly’: File exists

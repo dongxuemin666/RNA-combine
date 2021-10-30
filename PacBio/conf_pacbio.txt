@@ -14,7 +14,7 @@ AAGCAGTGGTATCAACGCAGAGTACATGGGG
 GTACTCTGCGTTGATACCACTGCTT
 ####################
 
-out_path_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/PacBio/test
+out_path_1=/store4/dongxm/happy/data/iso
 #output directory
 
 2 ##################configuration file for map.sh####################################
