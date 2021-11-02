@@ -18,3 +18,4 @@ conda-forge::python-igraph
 bioconda::scrublet==0.2.3
 bioconda::pysam
 bioconda::rmats 
+bioconda::minimap2

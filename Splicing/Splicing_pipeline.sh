@@ -66,8 +66,9 @@ cd $out_path_2 || exit 1
 mkdir assembly
 for file in $(ls $bam_path_2 | grep .bam)
         do
-file=$bam_path_2/$file
 pre_name=${file%.bam}
+file=$bam_path_2/$file
+#pre_name=${file%.bam}
 #$stringtie_path_2/
 stringtie $file -l $pre_name -p 8 -G $gtf_2 -o assembly/${pre_name}.gtf
 echo "assembly/${pre_name}.gtf" >> mergelist.txt
@@ -79,9 +80,10 @@ echo "The number of transcripts"
 cat stringtie_merged.gtf | grep -v "^#" | awk '$3=="transcript" {print}' | wc -l
 
 mkdir ballgown
-for file in $(ls | grep .bam)
+for file in $(ls $bam_path_2| grep .bam)
         do
 pre_name=${file%.bam}
+file=$bam_path_2/$file
 mkdir ballgown/$pre_name
 #$stringtie_path_2/
 stringtie -e -B -p 8 -G stringtie_merged.gtf -o ballgown/$pre_name/${pre_name}.gtf $file

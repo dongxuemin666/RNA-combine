@@ -37,16 +37,16 @@ out_path_2=/beegfs/store4/dongxm/happy/data/splicing
 #The path of output
 gtf_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 #The genome annotation file 
-metaData_2=/beegfs/store4/dongxm/happy/data/DE/meta.txt
+metaData_2=/beegfs/store4/dongxm/happy/data/DE/meta1.txt
 #The metaData file that describe the conditions of samles, below is one example
 ######
 id  dex
-SRR868857	normal
-SRR868862	normal
-SRR868865	normal
-SRR868869	tumor
-SRR868873	tumor
-SRR868877	tumor
+SRR868857_nsorted	normal
+SRR868862_nsorted	normal
+SRR868865_nsorted	normal
+SRR868869_nsorted	tumor
+SRR868873_nsorted	tumor
+SRR868877_nsorted	tumor
 ######
 qvalue_2=0.05
 #The qvalue boundary to detect significant differential transcripts.

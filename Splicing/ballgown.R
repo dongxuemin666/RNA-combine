@@ -1,4 +1,4 @@
-if(!require("getopt")) install.packages("getopt")
+if(!require("getopt")) install.packages("getopt",repos="http://cran.rstudio.com/")
 library(getopt)
 library(tools)
 if(!require("ballgown")) BiocManager::install("ballgown")
