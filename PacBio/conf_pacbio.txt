@@ -18,6 +18,9 @@ out_path_1=/store4/dongxm/happy/data/iso
 #output directory
 
 2 ##################configuration file for map.sh####################################
+method_2=minimap2
+#minimap2 or blasr
+
 bam_file_2=/store4/dongxm/happy/data/iso/alz.1perc.subreads.flnc.bam
 #raw sequencing file
 

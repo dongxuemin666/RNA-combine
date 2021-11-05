@@ -186,9 +186,9 @@ Second you need simply run Iso-seq.sh
 ```
 Then the results will be outputted to output directory. Among all of results, (prefix).hq.fasta.gz are isoforms with predicted accuracy ≥ 0.99, (prefix).lq.fasta.gz are isoforms with predicted accuracy < 0.99.
 #### 3.2 map.sh
-Align sub-reads to reference genome 
-For output, ...alignments.bam file is aligned bam file 
-To use it, first you need to edit map.sh module of the configuration file conf_pacbio.txt. 
+Align sub-reads to reference genome, two methods are provided, including minimap2 and blasr, all take sequenced bam files as input.   
+For output, if you choose blasr, ...alignments.bam file is aligned file. If you choose minimap2, ...sam file is aligned file.   
+To use it, first you need to edit map.sh module of the configuration file conf_pacbio.txt.   
 Second you need simply run map.sh 
 ```Bash
 ./map.sh
