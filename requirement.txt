@@ -19,3 +19,4 @@ bioconda::scrublet==0.2.3
 bioconda::pysam
 bioconda::rmats 
 bioconda::minimap2
+#bioconda::strelka

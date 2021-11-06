@@ -3,7 +3,7 @@
 genome_1=/store4/dongxm/happy/data/mutation/hg19.fasta
 #reference genome
 
-2 ##################configuration file for mutation.sh####################################
+2 ##################configuration file for gatk.sh####################################
 
 bam_path_2=/store4/dongxm/happy/data/mutation/test1
 #path of bam files
@@ -17,3 +17,16 @@ interval_2=chr1
 
 sample_amount_2=multiple
 #single or multiple, single sample or mutiple samples(one condition) for calling
+
+
+3 ##################configuration file for strelka.sh####################################
+normalbam_3=
+#mormal sample bam file
+tumorbam_3=
+#tumor sample bam file
+genome_3=
+#reference genome in fasta format
+run_dir_3=
+#output path
+threads_3=
+#number of threads

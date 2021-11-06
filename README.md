@@ -79,14 +79,23 @@ Second you simply run "SSN.sh"
 Then all results will be outputted to output directory.
 #### 1.6 Variant detection
 Detect variants based on RNA-seq data, including SNP and INDEL.  
-Inputs are bam files produced by pre_process.sh  
-For outputs, *xxx.pass.snp.indel.vcf.gz* file give details of called SNPs and INDELs.  
-To use it, first, you need to edit the configuration file "conf_mutation.txt".  
-Second you simply run "mutaion.sh"  
+Inputs are bam files produced by pre_process.sh
+Two methods are provided, including GATK and strelka2.     
+For outputs, if you choose GATK for analysis, xxxxxx.pass.snp.indel.vcf.gz* file give details of called SNPs and INDELs. If you choose strelka2 for analysis, xxxxxx.snp.pass.vcf give details of called SNPs and xxxxxx.indel.pass.vcf give details of called INDELs.  
+For GATK analysis, to use it, first, you need to edit the configuration file "conf_mutation.txt".  
+Second you simply run "gatk.sh"  
 ```Bash
 ./mutaion.sh
 ```
-Then all results will be outputted to the sample directory of bam files.
+Then all results will be outputted to the directory of bam files.
+
+For strelka2 analysis, to use it, first, you need to edit the configuration file "conf_mutation.txt".
+Second you simply run "strelka.sh"
+```Bash
+./strelka.sh
+```
+Then all results will be outputted to the directory you given.
+
 #### 1.7 RNA splicing analysis
 RNA splicing analysis includes three kinds of methods, including exon-based method: DEXseq, transcript-based method(not only)：StringTie+ballgown, event-based method: rMATS  
 
@@ -198,38 +207,24 @@ Then the results will be outputted to output directory
 ## Dependencies
 |Methods|Description|
 | ------------- |:-------------:| 
-|Sortmerna (Kopylova E. et al., 2012)	|Removing rRNA sequences |
-|Hisat2 (Kim D et al., 2015)	| Aligning reads to reference genome |
+|Sortmerna|Removing rRNA sequences |
+|Hisat2	| Aligning reads to reference genome |
 |samtools	| Converting file formats and auxiliary functionalities |
-|featureCounts (Yang Liao et al., 2013)	| Counting number of reads on genes | 
-|DESeq2(Love, M.I. et al., 2014), limma(Ritchie ME et al., 2015), edgeR(Robinson MD, 2010)|	 Differential gene analysis |
-|ClusterProfiler (Yu G et al., 2012)     | Function enrichment|
-|DEXseq(Anders S et al., 2012), StringTie(Pertea M et al., 2015), rMATS(Shihao Shen et al., 2014)	| Splicing site detection |
-|GATK |	Variant calling |
+|featureCounts	| Counting number of reads on genes | 
+|DESeq2, limma, edgeR|	 Differential gene analysis |
+|ClusterProfiler     | Function enrichment|
+|DEXseq, StringTie, rMATS| Splicing site detection |
+|GATK, strelka2 |	Variant calling |
 |CellRanger	| Produce barcode-gene matrix based on scRNA fastq files |
-|Scrublet (Samuel L. et al., 2019) |	Doublet detection in scRNA data |
-|Scanpy (Wolf, F. et al., 2018) |	filtering, normalization, clustering, dimension reduction, trajectory analysis (and so on) of scRNA data |
+|Scrublet |	Doublet detection in scRNA data |
+|Scanpy |	filtering, normalization, clustering, dimension reduction, trajectory analysis (and so on) of scRNA data |
 |isoseq3 |	Produce full-length, non-concatemer, unique transcripts based on PacBio raw bam read files |
-|blasr	| Map PacBio reads to reference genome |
+|blasr, minimap2	| Map PacBio reads to reference genome |
 
 
 
 ## Maintainer
-DONG Xuemin, Institute of Zoology, dongxuemin18@mails.ucas.ac.cn
+DONG Xuemin, Institute of Zoology, CAS, dongxuemin18@mails.ucas.ac.cn
 
 
-## References
-Anders S, Reyes A et al. (2012). Detecting differential usage of exons from RNA-seq data. Genome Research, 22, 2008-2017.  
-Anthony M. Bolger, Marc Lohse and et al. (2014) Trimmomatic: a flexible trimmer for Illumina sequence data, Bioinformatics, 30, 2114–2120.  
-Identification of Cell Doublets in Single-Cell Transcriptomic Data. Cell Systems, 8, 281-291.  
-Kim D, Langmead B et al. (2015) HISAT: a fast spliced aligner with low memory requirements. Nature Methods, 12, 357–360.  
-Kopylova E., Noé L. et al. (2012) SortMeRNA: Fast and accurate filtering of ribosomal RNAs in metatranscriptomic data, Bioinformatics, 28, 3211–3217.  
-Love, M.I., Huber, W. et al. (2014) Moderated estimation of fold change and dispersion for RNA seq data with DESeq2. Genome Biology, 15,550.  
-Pertea M, Pertea GM et al. (2015) StringTie enables improved reconstruction of a transcriptome from RNA-seq reads. Nature Biotechnology, 33, 290–295.  
-Ritchie ME, Phipson B et al. (2015) limma powers differential expression analyses for RNA sequencing and microarray studies. Nucleic Acids Research, 43, 47.  
-Robinson MD, McCarthy DJ et al. (2010) edgeR: a Bioconductor package for differential expression analysis of digital gene expression data. Bioinformatics, 26, 139-140.  
-Samuel L. Wolock, Romain Lopez et al. (2019) Scrublet: Computational Identification of Cell Doublets in Single-Cell Transcriptomic Data. Cell Systems, 8, 281-291.  
-Shihao Shen, Juw Won Park et al. (2014) rMATS: Robust and flexible detection of differential alternative splicing from replicate RNA-Seq data. PNAS, 111, 5593-5601.  
-Wolf, F., Angerer, P. & Theis, F. (2018) SCANPY: large-scale single-cell gene expression data analysis. Genome Biol, 19, 15.  
-Yang Liao, Gordon K Smyth et al. (2014) featureCounts: an efficient general-purpose program for assigning sequence reads to genomic features. Bioinformatics, 30, 923-930.  
-Yu G, Wang L et al. (2012) clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS: A Journal of Integrative Biology, 16, 284-287.  
+ 
