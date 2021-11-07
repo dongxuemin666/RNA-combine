@@ -27,5 +27,5 @@ bam_file_2=/store4/dongxm/happy/data/iso/alz.1perc.subreads.flnc.bam
 reference_genome_2=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/genome/genome_hg19/hg19.fasta
 #reference genome
 
-out_path_2=/store4/dongxm/happy/data/blasr
+out_path_2=/store4/dongxm/happy/data/minimap2
 #output directory

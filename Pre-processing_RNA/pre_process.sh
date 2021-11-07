@@ -83,11 +83,11 @@ ILLUMINACLIP:$trim_path/adapters/TruSeq3-PE.fa:2:30:10:8:true LEADING:3 TRAILING
         #$samtools_path/samtools sort ${pre_name}.bam -o ${pre_name}_sorted.bam
         # build index
         #$samtools_path/
-	samtools index ${pre_name}.bam
+	#samtools index ${pre_name}.bam
         # sort by reads name
         #$samtools_path/
 	samtools sort  ${pre_name}.bam -o ${pre_name}_nsorted.bam
-    
+    	samtools index ${pre_name}_nsorted.bam
 
 
         cd ..
@@ -181,11 +181,12 @@ LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:$read_length 2> ${pre_name}_Trimm
         #$samtools_path/samtools sort ${pre_name}.bam -o ${pre_name}_sorted.bam
         # build index
         #$samtools_path/
-	samtools index ${pre_name}.bam
+	#samtools index ${pre_name}.bam
         # sort by reads name
         #$samtools_path/
 	samtools sort  ${pre_name}.bam -o ${pre_name}_nsorted.bam
 #     
+	samtools index ${pre_name}_nsorted.bam
 # 
 # 
          cd ..

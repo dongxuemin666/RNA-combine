@@ -1,6 +1,6 @@
 #!/bin/bash
 
-method_2=`sed '/^method_2=/!d;s/.*=//' conf_pacbio.txt`
+method=`sed '/^method_2=/!d;s/.*=//' conf_pacbio.txt`
 bam_file_2=`sed '/^bam_file_2=/!d;s/.*=//' conf_pacbio.txt`
 reference_genome_2=`sed '/^reference_genome_2=/!d;s/.*=//' conf_pacbio.txt`
 out_path_2=`sed '/^out_path_2=/!d;s/.*=//' conf_pacbio.txt`

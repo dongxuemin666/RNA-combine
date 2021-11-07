@@ -20,13 +20,21 @@ sample_amount_2=multiple
 
 
 3 ##################configuration file for strelka.sh####################################
-normalbam_3=
-#mormal sample bam file
-tumorbam_3=
+normalsam_3=/store4/dongxm/happy/data/bulk/3.align/SRR868857.sam
+#normal sample bam file
+
+tumorsam_3=/store4/dongxm/happy/data/bulk/3.align/SRR868877.sam
 #tumor sample bam file
-genome_3=
+
+genome_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/genome/genome_hg19/hg19.fasta
 #reference genome in fasta format
-run_dir_3=
+
+run_dir_3=/store4/dongxm/happy/data/strelka
 #output path
-threads_3=
+
+region_3=chr1
+#regions
+
+
+threads_3=1
 #number of threads
