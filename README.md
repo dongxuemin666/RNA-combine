@@ -81,8 +81,7 @@ Then all results will be outputted to output directory.
 Detect variants based on RNA-seq data, including SNP and INDEL.  
 Inputs are bam and sam files produced by pre_process.sh
 Two methods are provided, including GATK and strelka2.     
-For outputs, if you choose GATK for analysis, xxxxxx.pass.snp.indel.vcf.gz* file give details of called SNPs and INDELs. If you choose strelka2 for analysis, xxxxxx.snp.pass.vcf give details of called SNPs and xxxxxx.indel.pass.vcf give details of called INDELs.  
-For GATK analysis, to use it, first, you need to edit the configuration file "conf_mutation.txt".  
+For outputs, if you choose GATK for analysis, xxxxxx.pass.snp.indel.vcf.gz* file gives details of called SNPs and INDELs. If you choose strelka2 for analysis, somatic.snvs.vcf.gz gives details of called SNPs and somatic.indels.vcf.gz gives details of called INDELs.  For GATK analysis, to use it, first, you need to edit the configuration file "conf_mutation.txt".  
 Second you simply run "gatk.sh"  
 ```Bash
 ./mutaion.sh
