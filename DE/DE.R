@@ -312,3 +312,104 @@ if(opt$method=='limma')
   write.csv(res_interest,paste(opt$output,'/de_gene_foldchange_below_0.csv',sep=''))
 
 }
+
+
+
+if(opt$method=='T-test')
+{
+
+  
+  if(file_ext(opt$input_matrix)=='csv')
+  {
+    countData <- read.csv(opt$input_matrix, header = TRUE,row.names=1)
+    print('This is the part of count data')
+    head(countData)
+  }else if(file_ext(opt$input_matrix)=='txt')
+  {
+    countData <- read.table(opt$input_matrix, header = TRUE,row.names=1)
+    print('This is the part of count data')
+    head(countData)
+  }else
+  {
+      print('Only csv and txt files are supported!')
+      quit()    
+    }
+    
+
+  if(file_ext(opt$metadata)=='csv')
+  {
+    metaData <- read.csv(opt$metadata, header = TRUE)
+    print('This is the metadata')
+    print(metaData)
+  }else if(file_ext(opt$metadata)=='txt')
+  {
+    metaData <- read.table(opt$metadata, header = TRUE)
+    print('This is the metadata')
+    print(metaData)
+  }else
+  {
+    print('Only csv and txt files are supported!')
+    quit()  
+    }  
+
+normal=metaData[metaData['dex']=="normal"]
+tumor=metaData[metaData['dex']!="normal"]
+
+
+Pvalue<-c(rep(0,nrow(countData))) 
+log2_FC<-c(rep(0,nrow(countData))) 
+fdr=c(rep(0,nrow(countData)))
+
+
+for(i in 1:nrow(countData)){
+ if(sd(countData[i,colnames(countData) %in% normal])==0&&sd(countData[i,colnames(countData) %in% tumor])==0){
+ Pvalue[i] <-NA
+ log2_FC[i]<-NA
+fdr[i]=NA
+ }else{
+ y=t.test(as.numeric(countData[i,colnames(countData) %in% normal]),as.numeric(countData[i,colnames(countData) %in% tumor]))
+ Pvalue[i]<-y$p.value
+ log2_FC[i]<-log2((mean(as.numeric(countData[i,colnames(countData) %in% normal]))+0.001)/(mean(as.numeric(countData[i,colnames(countData) %in% tumor]))+0.001)) 
+fdr[i]=p.adjust(Pvalue[i], "BH") 
+}
+}
+
+#fdr[i]=p.adjust(Pvalue[i], "BH") 
+
+res<-data.frame(cbind(countData,log2_FC,Pvalue))
+#res=as.data.frame(res)
+
+#print(head(res))
+res=na.omit(res) 
+print("log2_FC, Normal/Case")
+#print(head(res))
+
+  res_interest=res[(res$Pvalue)<opt$pvalue & (res$log2_FC)>(opt$logfoldchange),]
+  res_interest <- res_interest[order(res_interest$Pvalue),]
+  write.csv(res_interest,paste(opt$output,'/de_gene_foldchange_above_0.csv',sep=''))
+  
+  
+  res_interest=res[(res$Pvalue)<opt$pvalue & res$log2_FC<(-(opt$logfoldchange)),]
+  res_interest <- res_interest[order(res_interest$Pvalue),]
+  write.csv(res_interest,paste(opt$output,'/de_gene_foldchange_below_0.csv',sep=''))
+
+  
+  
+  res <- res[order(res$Pvalue),]
+  pdf(file=paste(opt$output,'/volcano_plot.pdf',sep=''))
+  #reset par
+  par(mfrow=c(1,1))
+  # Make a basic volcano plot
+  with(res, plot(log2_FC, -log10(Pvalue), pch=20, main="Volcano plot"))
+  
+  # Add colored points: blue if padj<0.01, red if log2FC>1 and padj<0.05)
+  with(subset(res, Pvalue<(opt$pvalue) ), points(log2_FC, -log10(Pvalue), pch=20, col="blue"))
+  with(subset(res, Pvalue<(opt$pvalue) & abs(log2_FC)>(opt$logfoldchange)), points(log2_FC, -log10(Pvalue), pch=20, col="red"))
+  
+  dev.off()
+
+  
+
+  
+}
+
