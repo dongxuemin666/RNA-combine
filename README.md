@@ -16,12 +16,12 @@ Download the codes to your directory and build the environment using below code
 conda install --file=requirement.txt
 ```
 
-To use function modules in each directories, first, you need to edit parameters for concerned modules in configuration file, such as the path of softwares, the path of raw sequencing data. This process is quite simple, because all parameters are explained in configration file. Then, run corresponding bash commands. 
+To use function modules in each directories, first, you need to edit parameters for concerned modules in configuration file, such as the path of software, the path of raw sequencing data. This process is quite simple, because all parameters are explained in configuration file. Then, run corresponding bash commands. 
 ### 1 Bulk NGS RNA-seq data analysis
 #### 1.1 Pre-processing_RNA
 Pre-process the bulf RNA-seq data.  
 Inputs are fastq files.  
-Outputs mainly include aligned bam files and gene count matrix, with intermediate files saved in 4 directories. *1.rm_rrna* save sequences after removing rRNA sequences,with log files recording rRNA information for each sample. *2.trim* save sequences after cutting adapters and low quality bases, with log files recording information of cutted sequences. *3.align* save aligned bam files, with log files recording alignment information. *4.count* save gene count files which annotate sequences to annoated reference gtf files, with log and summary files recording annotation details. 
+Outputs mainly include aligned bam files and gene count matrix, with intermediate files saved in 4 directories. *1.rm_rrna* save sequences after removing rRNA sequences, with log files recording rRNA information for each sample. *2.trim* save sequences after cutting adapters and low quality bases, with log files recording information of cut sequences. *3.align* save aligned bam files, with log files recording alignment information. *4.count* save gene count files which annotate sequences to annotated reference gtf files, with log and summary files recording annotation details. 
  
 To use it, first you need to edit the configuration file "conf_prerna.txt".  
 Second, it is optional to get the index files for rRNA and reference genome, depending on whether you have index files or not. 
@@ -36,7 +36,7 @@ Third, simply run pre_process.sh
 ```
 Then all results will be outputted to same directory of fastq files.
 #### 1.2 Differential（DE） analysis
-Explore the differential expressed  genes in different conditions, utilizing the bulf RNA-seq data.  
+Explore the differential expressed  genes in different conditions, utilizing the bulk RNA-seq data.  
 Input is gene count file.  
 For outputs, "sample_correlation_plot.png" shows the sample distances.  
 "volcano_plot.png" illustrates the significantly differential genes in differential conditions.  
@@ -58,7 +58,7 @@ Second you simply run "function.sh"
 Then all results will be outputted to output directory.
 #### 1.4 Gene co-expression relation 
 Explore the gene co-expression pattern based on Spearman, Pearson, PCA-PMI(Juan Zhao et al. PNAS, 2016).    
-Input is a gene exprssion matrix, rows are genes, columns are samples.    
+Input is a gene expression matrix, rows are genes, columns are samples.    
 For outputs, pdf files illustrate gene co-expression pattern, csv files give more details about coefficients.   
 To use it, first, you need to edit the configuration file "conf_relation.txt".  
 Second you simply run "relation.sh"  
@@ -70,7 +70,7 @@ Then all results will be outputted to output directory.
 Explore differential gene co-expression patterns in different conditions, mainly utilizing SSN(Xiaoping Liu et al. Nucleic Acids Research, 2016).  
 For input, normal_gene_matrix is used to build background network, case_gene_matrix was added to background network to form perturbation network. csv format is needed. 
 Then the differential gene relations(differential edges) were calculated between normal samples and case samples.  
-For outputs, the coefficients of differential edges are given, including Pearson corelation deviation betwwen normal samples and case samples, p-value for differential edges.
+For outputs, the coefficients of differential edges are given, including Pearson correlation deviation between normal samples and case samples, p-value for differential edges.
 To use it, first, you need to edit the configuration file "conf_ssn.txt".  
 Second you simply run "SSN.sh"  
 ```Bash
@@ -124,7 +124,7 @@ Second you need simply run cell_clustering.sh
 Then the results will be outputted to output directory
 #### 2.2 doublet_detection.sh
 Detect doublets based on gene-cell matrix 
-For outputs, umap_doublet_plot.png is UMAP plot of doublets and single cells. cell_gene_filtered_matrix.csv is gene-cell matrix under filtering of doublets, which could be input of cell_clustering.sh moudule  
+For outputs, umap_doublet_plot.png is UMAP plot of doublets and single cells. cell_gene_filtered_matrix.csv is gene-cell matrix under filtering of doublets, which could be input of cell_clustering.sh module  
 To use it, first you need to edit doublet_detection.sh module of the configuration file conf_scRNA.txt. 
 Second you need simply run doublet_detection.sh 
 ```Bash
@@ -135,7 +135,7 @@ Then the results will be outputted to output directory
 Designed for quality control, data dimension reduction, cell clustering, marker gene detection for each cluster et. This process mainly utilizes scanpy python package.  
 The input is 10X gene-cell matrix.  
 For output, "highest_expressed_genes.png" illustrates the highest expressed genes in this sample.  
-"PCA_variance_ratio.png" shows the variance of PCs,  PC1 to 'elbow' PC of this plot are commonly used for subsequent analysis, which is corresponding to "num_of_PCs_1" parameter in configurarion file.  
+"PCA_variance_ratio.png" shows the variance of PCs,  PC1 to 'elbow' PC of this plot are commonly used for subsequent analysis, which is corresponding to "num_of_PCs_1" parameter in configuration file.  
 "violin_for_quality.png" shows the quality of your data includes the number of genes, the number of UMIs, the percentage of mitochondrial genes.  
 "umap_plot_clusters.png" shows the cell clusters enriched.
 "object.h5ad" is the scanpy object that contains all information of analyzed data, which could be input for othe analyses.  
@@ -154,7 +154,7 @@ Second you need simply run plot_gene_scrna.sh
 ```
 Then the results will be outputted to output directory
 #### 2.5 search_cell_type.sh 
-Predict the cell type based on your provided significant gene(SG) list. For each SG, the program searches correpsonding cell type to it in database. Finally, the program summarize what cell type it is most like. Right now, cell marker datasets in CellMarker database and PanglaoDB database are downloaded and clearned, you can choose to use them.
+Predict the cell type based on your provided significant gene(SG) list. For each SG, the program searches corresponding cell type to it in database. Finally, the program summarize what cell type it is most like. Right now, cell marker datasets in CellMarker database and PanglaoDB database are downloaded and cleaned, you can choose to use them.
 To use it, first you need to edit search_cell_type module of the configuration file conf_scRNA.txt .  
 Second you need simply run search_cell_type.sh 
 ```Bash
@@ -172,7 +172,7 @@ Second you need simply run label_celltype.sh
 Then the results will be outputted to output directory
 #### 2.7 trajectory.sh
 You may want to detect the evolutionary relations among different cell types, you can use this function to do so.
-To use it, first you need to edittrajectory module of the configuration file conf_scRNA.txt.  
+To use it, first you need to edit trajectory module of the configuration file conf_scRNA.txt.  
 Second you need simply run trajectory.sh
 ```Bash
 ./trajectory.sh
@@ -186,7 +186,7 @@ Run install.sh before run pipelines for installing needed software.
 
 #### 3.1 Iso-seq.sh
 Turn raw read bam files to full-length, non-concatemer, unique transcript files. 
-Fasta outputs are divided into HQ and LQ files, and only one concensus for one transcript cluster. 
+Fasta outputs are divided into HQ and LQ files, and only one consensus for one transcript cluster. 
 To use it, first you need to edit Iso-seq.sh module of the configuration file conf_pacbio.txt. 
 Second you need simply run Iso-seq.sh 
 ```Bash
