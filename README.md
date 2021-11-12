@@ -10,7 +10,9 @@ RNA-combine mainly contains three modules, NGS bulk RNA-seq data analysis, scRNA
 
 ## Usage
 ### 0 Environment building and overview
-
+Dependencies:  
+python 3.7  
+R 3.6  
 Download the codes to your directory and build the environment using below code  
 ```Bash
 conda install --file=requirement.txt
