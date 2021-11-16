@@ -36,7 +36,9 @@ time gatk MarkDuplicates -I ${pre_name}.sorted.bam -O ${pre_name}.markdup.bam -M
 # #time $gatk_path/gatk HaplotypeCaller -R $genome -I ${pre_name}.recal.bam -ERC GVCF --dbsnp $known_snp -O ${pre_name}.snps.indels.vcf
 
 
-
+time gatk SplitNCigarReads -R $genome \
+-I ${pre_name}.markdup.bam \
+-O  ${pre_name}.markdup.split.bam
 
 
 
@@ -49,13 +51,13 @@ time gatk MarkDuplicates -I ${pre_name}.sorted.bam -O ${pre_name}.markdup.bam -M
 
 if [ "$sample_amount" == "multiple" ]; then
 
-time gatk HaplotypeCaller -R $genome -I ${pre_name}.markdup.bam -ERC GVCF  -O ${pre_name}.snps.indels.vcf
+time gatk HaplotypeCaller -R $genome -I ${pre_name}.markdup.split.bam -ERC GVCF  -O ${pre_name}.snps.indels.vcf
 
 fi
 
 if [ "$sample_amount" == "single" ]; then
 
-time gatk HaplotypeCaller -R $genome -I ${pre_name}.markdup.bam -O ${pre_name}.snps.indels.vcf
+time gatk HaplotypeCaller -R $genome -I ${pre_name}.markdup.split.bam -O ${pre_name}.snps.indels.vcf
 
 
 fi
