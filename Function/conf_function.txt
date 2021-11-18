@@ -1,6 +1,20 @@
 ####################configuration file for function.sh ##################################
 input_significant_gene_file=/beegfs/store4/dongxm/happy/data/function/genelist
-#Input the significant gene file that is produced by differential gene analysis
+#Input the significant gene file, below is one example:
+###########################
+ENSG00000167614
+ENSG00000260877
+ENSG00000171346
+ENSG00000100146
+ENSG00000161055
+ENSG00000050555
+ENSG00000172927
+ENSG00000162896
+ENSG00000104332
+ENSG00000160307
+ENSG00000151882
+ENSG00000141750
+###########################
 
 gene_type=ENSEMBL
 #The ID type of genes you provided, SYMBOL, ENTREZID, ENSEMBL,ENSEMBLTRANS are supported

@@ -1,7 +1,7 @@
 1 ##################configuration file for Iso-seq.sh####################################
 
 bam_file_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/PacBio/public/alz.1perc.subreads.bam
-#raw sequencing data. 
+#raw sequencing bam file. 
 
 primer_fasta_file_1=/store2/panshk/Project/10.Xuemin/toolbox/Data/PacBio/public/primers.fasta
 #primer fasta file, for example:

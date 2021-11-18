@@ -3,7 +3,17 @@ method=T-test
 #Methods for DE analysis, DESeq2, edgeR, limma, T-test are supported
 
 input_matrix=/store4/dongxm/happy/data/bulk/4.count/expression_matrix.txt
-#Input gene expression matrix file
+#Input gene expression matrix file, csv or txt files are supported, below is one example
+#############################
+Geneid SRR868857 SRR868862 SRR868865 SRR868869 SRR868873 SRR868877
+ENSG00000223972.5_3 0 0 0 0 0 0
+ENSG00000227232.5_3 1 1 0 0 0 0
+ENSG00000243485.5_7 0 0 0 0 0 0
+ENSG00000237613.2_4 0 0 0 0 0 0
+ENSG00000268020.3_4 0 0 0 0 0 0
+ENSG00000240361.2_4 0 0 0 0 0 0
+ENSG00000186092.6_5 0 0 0 0 0 0
+#############################
 
 metadata=/store4/dongxm/happy/data/DE/meta.txt
 #Metadata that introduce the condition of samples, below is one example

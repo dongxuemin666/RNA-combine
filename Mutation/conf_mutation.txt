@@ -6,7 +6,7 @@ genome_1=/store4/dongxm/happy/data/mutation/hg19.fasta
 2 ##################configuration file for gatk.sh####################################
 
 bam_path_2=/store4/dongxm/happy/data/mutation/test1
-#path of bam files
+#path of bam files, bam files should be like ******.bam
 
 genome_2=/store4/dongxm/happy/data/mutation/hg19.fasta
 #reference genome

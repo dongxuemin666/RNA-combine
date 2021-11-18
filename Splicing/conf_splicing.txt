@@ -64,22 +64,26 @@ condition1_files_3=/store4/dongxm/happy/data/splicing1/normal.txt
 #A file that introduce the bam(sorted) files in condition1, below is one example
 
 #############
-#vim normal.txt
-
-#~/SRR868857_sorted.bam,~/SRR868862_sorted.bam,~/SRR868865_sorted.bam
+~/SRR868857_sorted.bam,~/SRR868862_sorted.bam,~/SRR868865_sorted.bam
 #############
 
 
 condition2_files_3=/store4/dongxm/happy/data/splicing1/tumor.txt
-#A file that introduce the bam(sorted) files in condition2
+#A file that introduce the bam(sorted) files in condition2, similar to above one
+
 gtf_3=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
 #The genome annotation file
+
 out_path_3=/store4/dongxm/happy/data/splicing1
 #The directory of output
+
 paired_or_single_3=single
 #The sequencing is paired-end or single-end
+
 tmp_3=/store4/dongxm/happy/data/splicing1/tmp
 #A temporary directory to store intermediate file
+
+
 event_type_3=RI
 ############
 There are 5 types of events that could be detected,including

@@ -18,7 +18,7 @@ genome_0=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/genome/genome_hg19/hg
 
 ###############configuration module for pre_process.sh #####################################
 fq_path=/store4/dongxm/happy/data/bulk
-#The path of fastq files
+#The path of fastq files, file should be like ***.fastq
 
 #hisat2_path=/store4/dongxm/software/dongconda/bin
 #The path of Hisat2 software
