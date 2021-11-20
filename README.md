@@ -222,12 +222,12 @@ Then the results will be outputted to output directory
 |isoseq3 |	Produce full-length, non-concatemer, unique transcripts based on PacBio raw bam read files |
 |blasr, minimap2	| Map PacBio reads to reference genome |
 
-## Dependencies
+## Data
 |Data|Source|
 | ------------- |:-------------:|
 |Human reference genome|[Baidu](https://pan.baidu.com/s/1OBjaj7EZN9GzEmi684AxFA):7788 |
-|Human gene annotation file | Aligning reads to reference genome |
-|Test fastq file       | Converting file formats and auxiliary functionalities |
+|Human gene annotation file | [Baidu](https://pan.baidu.com/s/1waJBu7sjjL4AgIYqpVN-6w):2233 |
+|Test fastq file       | [Baidu](): |
 
 
 ## Maintainer
