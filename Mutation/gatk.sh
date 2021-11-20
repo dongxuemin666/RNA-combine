@@ -57,7 +57,7 @@ fi
 
 if [ "$sample_amount" == "single" ]; then
 
-time gatk HaplotypeCaller -R $genome -I ${pre_name}.markdup.split.bam -O ${pre_name}.snps.indels.vcf
+time gatk HaplotypeCaller -R $genome -I ${pre_name}.markdup.split.bam -O genotype.vcf.gz
 
 
 fi
@@ -86,13 +86,13 @@ time gatk GenotypeGVCFs -R $genome -V gendb://my_database -O genotype.vcf.gz
 
 fi
 
-if [ "$sample_amount" == "single" ]; then
+#if [ "$sample_amount" == "single" ]; then
 
-time cp ${pre_name}.snps.indels.vcf genotype.vcf
-gzip genotype.vcf
+#time cp ${pre_name}.snps.indels.vcf genotype.vcf
+#gzip genotype.vcf
 
 
-fi
+#fi
 
 # select SNPs
 time gatk SelectVariants -select-type SNP -V genotype.vcf.gz -O genotype.snp.vcf.gz
