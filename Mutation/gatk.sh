@@ -88,7 +88,8 @@ fi
 
 if [ "$sample_amount" == "single" ]; then
 
-time cp ${pre_name}.snps.indels.vcf genotype.vcf.gz
+time cp ${pre_name}.snps.indels.vcf genotype.vcf
+gzip genotype.vcf
 
 
 fi
