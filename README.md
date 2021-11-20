@@ -225,10 +225,11 @@ Then the results will be outputted to output directory
 ## Data
 |Data|Source|
 | ------------- |:-------------:|
-|Human reference genome|[Baidu](https://pan.baidu.com/s/1OBjaj7EZN9GzEmi684AxFA):7788 |
-|Human gene annotation file | [Baidu](https://pan.baidu.com/s/1waJBu7sjjL4AgIYqpVN-6w):2233 |
-|Test fastq file       | [Baidu](https://pan.baidu.com/s/10LWDidZXF1Gld06WmeZP1g):1122 |
-
+|Human reference genome|[Baidu_disk](https://pan.baidu.com/s/1OBjaj7EZN9GzEmi684AxFA):7788 |
+|Human gene annotation file | [Baidu_disk](https://pan.baidu.com/s/1waJBu7sjjL4AgIYqpVN-6w):2233 |
+|Test bulk fastq file       | [Baidu_disk](https://pan.baidu.com/s/10LWDidZXF1Gld06WmeZP1g):1122 |
+|Test scRNA fastq file      |Download by "fastq-dump --gzip --split-files SRR5799774.sra" |
+|Test IsoSeq bam file|[link](https://downloads.pacbcloud.com/public/dataset/IsoSeq_sandbox/2020_Alzheimer8M_subset/alz.1perc.subreads.bam)|
 
 ## Maintainer
 DONG Xuemin, Institute of Zoology, CAS, dongxuemin18@mails.ucas.ac.cn
