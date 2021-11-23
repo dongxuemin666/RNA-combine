@@ -15,7 +15,7 @@ genome_2=/store4/dongxm/happy/data/mutation/hg19.fasta
 interval_2=chr1
 #One or more genomic intervals over which to operate
 
-sample_amount_2=single
+sample_amount_2=multiple
 #single or multiple, single sample or mutiple samples(one condition) for calling
 
 

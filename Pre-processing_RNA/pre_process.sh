@@ -70,7 +70,7 @@ ILLUMINACLIP:$trim_path/adapters/TruSeq3-PE.fa:2:30:10:8:true LEADING:3 TRAILING
         #$hisat2_path/
 	hisat2 -t -p $threads -q -x $hisat_index_path/$hisat_index_prefix \
         --rg-id ${pre_name} \
-        --rg SM:${pre_name} --rg LB:${pre_name} --rg PL:ILLUMINA \           
+        --rg SM:${pre_name} --rg LB:${pre_name} --rg PL:ILLUMINA \
         -1 ../2.trim/${pre_name}_nonrRNA_trimmed_1P.fastq \
         -2 ../2.trim/${pre_name}_nonrRNA_trimmed_2P.fastq \
         -S ${pre_name}.sam

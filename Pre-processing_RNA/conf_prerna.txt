@@ -13,25 +13,25 @@ genome_0=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/genome/genome_hg19/hg
 #The reference genome
 
 ##############configuration module for pre_process.sh #####################################
-fq_path=/store4/dongxm/happy/data/test_data
+fq_path=/store4/dongxm/happy/data/wu
 #The path of fastq files, file should be like ***.fastq
 
 sortmerna_index_path=/store4/dongxm/happy/data/rrna
 #The path of rRNA index files
 
-hisat_index_path=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/hisat_index/human/hg19
+hisat_index_path=/store4/dongxm/happy/data/wu/hisat
 #The path of hisat index of reference genome
 
 hisat_index_prefix=genome
 #The prefix of hisat index of reference genome
 
-gtf=/store2/panshk/Project/10.Xuemin/toolbox/Data/ref/annotation/human_hg19/gencode.v34lift37.annotation.gtf
+gtf=/store4/dongxm/happy/data/wu/gtf
 #genome annotaion file, must be in the same version to reference genome and reference index file
 
-PE_or_SE=SE
+PE_or_SE=PE
 #You data is paied-end or single-end, enter SE or PE
 
-read_length=36
+read_length=150
 #The read length of your data
 
 threads=20
