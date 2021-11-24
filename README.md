@@ -17,7 +17,11 @@ Download the codes to your directory and build the environment using below code
 ```Bash
 conda install --file=requirement.txt
 ```
-
+(
+Optional: Before that, build a new environment is suggested, by   
+conda create -n rna-combine python=3.7  
+source activate rna-combine    
+)
 To use function modules in each directories, first, you need to edit parameters for concerned modules in configuration file, such as the path of software, the path of raw sequencing data. This process is quite simple, because all parameters are explained in configuration file. Then, run corresponding bash commands. 
 ### 1 Bulk NGS RNA-seq data analysis
 #### 1.1 Pre-processing_RNA
