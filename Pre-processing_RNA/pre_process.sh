@@ -23,6 +23,10 @@ flag=1
 
 if [ "$PE_or_SE" == "PE" ]; then
 cd $fq_path || exit 1
+
+files=$(ls *_1.fastq 2> /dev/null | wc -l)
+if [ "$files" = "0" ] ; then echo "file should be like ***_1.fastq and ***_2.fastq";  fi
+
 for file in $(ls | grep _1.fastq)
         do
         pre_name=${file%_1.fastq}
@@ -131,6 +135,12 @@ fi
 
 if [ "$PE_or_SE" == "SE" ]; then
 cd $fq_path || exit 1
+
+
+files=$(ls *.fastq 2> /dev/null | wc -l)
+if [ "$files" = "0" ] ; then echo "file should be like ***.fastq";  fi
+
+
 for file in $(ls | grep .fastq)
         do
         

@@ -8,6 +8,11 @@ known_snp=`sed '/^known_snp_2=/!d;s/.*=//' conf_mutation.txt`
 interval=`sed '/^interval_2=/!d;s/.*=//' conf_mutation.txt`
 sample_amount=`sed '/^sample_amount_2=/!d;s/.*=//' conf_mutation.txt`
 cd $bam_path || exit 1
+
+files=$(ls *.bam 2> /dev/null | wc -l)
+if [ "$files" = "0" ] ; then echo "file should be like ***.bam";  fi
+
+
  
 mkdir outs
 

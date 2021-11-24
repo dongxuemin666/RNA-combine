@@ -25,7 +25,7 @@ hisat_index_path=/store4/dongxm/happy/data/wu/hisat
 hisat_index_prefix=genome
 #The prefix of hisat index of reference genome
 
-gtf=/store4/dongxm/happy/data/wu/gtf
+gtf=/store4/dongxm/happy/data/wu/gtf/saker.newChr.corrected.gtf
 #genome annotaion file, must be in the same version to reference genome and reference index file
 
 PE_or_SE=PE

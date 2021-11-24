@@ -26,6 +26,11 @@ $gtf_1 \
 $output_path_1/DEXSeq.chr.gff
 
 cd $sam_file_path_1
+files=$(ls *.sam 2> /dev/null | wc -l)
+if [ "$files" = "0" ] ; then echo "file should be like ***.sam";  fi
+
+
+
 for file in $(ls | grep .sam)
         do
 pre_name=${file%.sam}
@@ -61,6 +66,10 @@ raw_dir=$(pwd)
 #$samtools_path_2/
 #samtools sort -@ 8 -o $out_path_2/${pre_name}.bam $file
 #        done
+
+
+files=$(ls $bam_path_2/*.bam 2> /dev/null | wc -l)
+if [ "$files" = "0" ] ; then echo "file should be like ***.bam";  fi
 
 cd $out_path_2 || exit 1
 mkdir assembly
