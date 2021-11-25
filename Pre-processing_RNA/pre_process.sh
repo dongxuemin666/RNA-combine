@@ -27,7 +27,7 @@ cd $fq_path || exit 1
 files=$(ls *_1.fastq 2> /dev/null | wc -l)
 if [ "$files" = "0" ] ; then echo "file should be like ***_1.fastq and ***_2.fastq";  fi
 
-for file in $(ls | grep _1.fastq)
+for file in $(ls | grep _1.fastq$)
         do
         pre_name=${file%_1.fastq}
         fq1="${pre_name}_1.fastq"
@@ -141,7 +141,7 @@ files=$(ls *.fastq 2> /dev/null | wc -l)
 if [ "$files" = "0" ] ; then echo "file should be like ***.fastq";  fi
 
 
-for file in $(ls | grep .fastq)
+for file in $(ls | grep .fastq$)
         do
         
         pre_name=${file%.fastq}
