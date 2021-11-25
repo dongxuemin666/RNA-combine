@@ -93,10 +93,10 @@ if(opt$method=='DESeq2')
   with(subset(res, pvalue<(opt$pvalue) & abs(log2FoldChange)>(opt$logfoldchange)), points(log2FoldChange, -log10(pvalue), pch=20, col="red"))
   
   dev.off()
-  vsdata <- vst(dds, blind=FALSE)
-  pdf(file=paste(opt$output,'/pca_plot.pdf',sep=''))
-  plotPCA(vsdata, intgroup="dex") 
-  dev.off()
+#  vsdata <- vst(dds, blind=FALSE)
+#  pdf(file=paste(opt$output,'/pca_plot.pdf',sep=''))
+#  plotPCA(vsdata, intgroup="dex") 
+#  dev.off()
   
   res_interest=res[(res$pvalue)<opt$pvalue & (res$log2FoldChange)>(opt$logfoldchange),]
   res_interest <- res_interest[order(res_interest$pvalue),]
@@ -352,8 +352,8 @@ if(opt$method=='T-test')
     quit()  
     }  
 
-normal=metaData[metaData['dex']=="normal"]
-tumor=metaData[metaData['dex']!="normal"]
+normal=metaData[metaData['dex']==levels(metaData$dex)[1]]
+tumor=metaData[metaData['dex']!=levels(metaData$dex)[1]]
 
 
 Pvalue<-c(rep(0,nrow(countData))) 
@@ -381,7 +381,10 @@ res<-data.frame(cbind(countData,log2_FC,Pvalue))
 
 #print(head(res))
 res=na.omit(res) 
-print("log2_FC, Normal/Case")
+print("important")
+print(levels(metaData$dex)[1])
+print("VS")
+print(levels(metaData$dex)[2])
 #print(head(res))
 
   res_interest=res[(res$Pvalue)<opt$pvalue & (res$log2_FC)>(opt$logfoldchange),]
