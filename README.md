@@ -241,5 +241,6 @@ Then the results will be outputted to output directory
 ## Maintainer
 DONG Xuemin, Institute of Zoology, CAS, dongxuemin18@mails.ucas.ac.cn
 
-
+## Citation
+Dong, X., Dong, S., Pan, S. et al. RNA-combine: a toolkit for comprehensive analyses on transcriptome data from different sequencing platforms. BMC Bioinformatics 23, 26 (2022). https://doi.org/10.1186/s12859-021-04549-y
  
